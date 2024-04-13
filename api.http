@@ -1,0 +1,35 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": 123,
+    "details": null,
+    "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/efbe06f9-92dd-4087-8646-d583ba8ff3bf/attendees
+Content-Type: application/json
+
+{
+    "name": "Weslei Visentin",
+    "email": "rola32@hotmail.com"
+}
+
+
+###
+
+GET http://localhost:3333/events/efbe06f9-92dd-4087-8646-d583ba8ff3bf
+
+###
+
+GET http://localhost:3333/attendees/1/badge
+
+###
+
+GET http://localhost:3333/attendees/3/check-in
+
+###
+
+GET http://localhost:3333/events/efbe06f9-92dd-4087-8646-d583ba8ff3bf/attendees?query=wes
